@@ -12,9 +12,12 @@ public class App
     public static void main( String[] args )
     {
     	ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml" );
-//    	Dev obj = (Dev) context.getBean("dev");
+    	Dev obj = context.getBean(Dev.class);
     	
-//    	obj.build();
-        System.out.println( "Coming to App" );
+    	obj.build();
+    	
+    	
+//        System.out.println( obj.getAge());
+    	System.out.println("Welcome on Awesome project");
     }
 }
